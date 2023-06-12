@@ -1,0 +1,33 @@
+.navbar{
+    background-color: #242424 !important;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-home{
+    color: white !important;
+    
+}
+
+/*.row table{
+    width: 100%;
+    border: 1px solid black !important;
+}*/
+
+.row table thead tr th {
+    border: 1px solid black !important;
+}
+
+.row table{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.btn{
+    position: relative;
+    float: right;
+    margin: 2%;
+    
+}
