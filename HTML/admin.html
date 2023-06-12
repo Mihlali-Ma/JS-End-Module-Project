@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="../STYLE/admin.css">
+    <title>Admin</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-home nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./admin.html">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products.html">products</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" fdprocessedid="23zym">ADD PRODUCTS</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Insert content details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="id" class="col-form-label">ID:</label>
+                <input type="text" class="form-control" id="product-id" placeholder="enter id">
+              </div>
+              <div class="mb-3">
+              <label for="Name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="product-name" placeholder="name of product">
+              </div>
+              <div class="mb-3">
+              <label for="Name" class="col-form-label">Description:</label>
+              <input type="text" class="form-control" id="product-descript" placeholder="Describe product">
+              </div>
+              <div class="mb-3">
+              <label for="Name" class="col-form-label">Image:</label>
+              <input type="text" class="form-control" id="product-img" placeholder="enter image URL">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">image</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-bd">
+                <!--<tr>
+                    <th scope="row">#</th>
+                    <td>longboard</td>
+                    <td>stuff</td>
+                    <td><img style="height: 70px;" src="https://i.postimg.cc/7Zm8Pfb5/6lckwbdz7pa8cibn.jpg" alt=""></td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Edit</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm">Remove</button></td>
+                </tr>-->
+
+        </tbody>
+    </table>
+          
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="../SCRIPT/admin.js"></script>   
+</body>
+</html>
