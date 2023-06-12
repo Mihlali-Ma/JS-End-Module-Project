@@ -1,4 +1,44 @@
-#carousel{
-    height:2px;
+.btn-see-more{
+    background:none;
+    color: white;
+    border: 1px solid white;
+}
+
+/* .caro{
     width: 100%;
+    height: 100vh;
+} */
+
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item{
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item img{
+    object-fit: cover;
+}
+
+.container-fluid hr{
+    margin: 5%;
+}
+
+.container-fluid h2{
+    margin-top: 5%;
+}
+
+.navbar{
+    background-color: #242424 !important;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-home{
+    color: white !important;
+    
 }
