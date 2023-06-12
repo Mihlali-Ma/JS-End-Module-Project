@@ -10,29 +10,32 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="carousel">
+    <section id="section1">
 
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide caro" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://i.postimg.cc/HkkR2zFM/download.jpg" class="d-block w-100" alt="">
+                    <img src="https://i.postimg.cc/HkkR2zFM/download.jpg" class="d-block" alt="">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
+                        <button class="btn-see-more"><a href="#content">SEE MORE</a></button>
                     </div>
                 </div>
               <div class="carousel-item">
-                <img src="https://i.postimg.cc/rsggRXVP/photo-1536318431364-5cc762cfc8ec.jpg" class="d-block w-100" alt="">
+                <img src="https://i.postimg.cc/rsggRXVP/photo-1536318431364-5cc762cfc8ec.jpg" class="d-block" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
+                    <button class="btn-see-more"><a href="#content">SEE MORE</a></button>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="https://i.postimg.cc/7YfQJhz1/skating-skate-skateboard-skateboarding.jpg" class="d-block w-100" alt="">
+                <img src="https://i.postimg.cc/7YfQJhz1/skating-skate-skateboard-skateboarding.jpg" class="d-block" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
+                    <button class="btn-see-more"><a href="#content">SEE MORE</a></button>
                 </div>
                </div>
             </div>
@@ -45,6 +48,91 @@
               <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </section>
+    <section class="content">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-home nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./admin.html">Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./products.html">products</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <div class="container-fluid">
+            <h2 class="text-center">About Us.</h2>
+            <p class="text-center fs-6">We are a skateboarding company and we sponser skaters around the world.</p>
+            <p class="text-center fs-6">SKT was first established 1960 with the funding from companies like Redbull and Vans</p>
+            <p class="text-center fs-6">we hope our relationship keeps on growing with our current sponsers as we progress to help even more skators</p>
+            <hr>
+            <h2 class="text-center">Featured products</h2>
+            <div class="row">
+                <div class="col"><div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col"><div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col"><div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col"><div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col"><div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+        
     </section>
     
     <!--Bootstrap-->
