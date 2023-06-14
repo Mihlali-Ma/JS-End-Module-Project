@@ -1,7 +1,7 @@
 let contents = document.getElementById('tbl-bd')
 
 let products = [
-    {
+    /*{
         id:"1",
         Name:"Longboard",
         Description:"This is a 41-inch Cruiser Longboard",
@@ -28,7 +28,7 @@ let products = [
         Description:"This is a freestyling skateboard",
         Image:"https://i.postimg.cc/fRbzy8gj/santa-cruz-classic-dot-mid-7-80-skate-completo.jpg",
         price:4000.00
-    }
+    }*/
 ]
 
 products.forEach(product => {
@@ -53,6 +53,9 @@ let Describe = document.getElementById("product-descript")
 let Img = document.getElementById("product-img")
 let price = document.getElementById("product-price")
 document.getElementById("insert")
+let btn_remove= document.getElementById("remove")
+
+
 //ADD function
 function add() {
     let prod = {
@@ -69,6 +72,7 @@ function add() {
     price.value=prod.Price;
     products.push(prod)
     console.log(products);
+    save()
     contents.innerHTML += `
     <tr>
     <th scope="row">${prod.id}</th>
@@ -77,10 +81,14 @@ function add() {
     <td>R${prod.Price}</td>
     <td><img style="height: 70px;" src="${Img.value}"></td>
     <td><button type="button" class="btn btn-primary btn-sm">Edit</button></td>
-    <td><button type="button" class="btn btn-secondary btn-sm">Remove</button></td>
+    <td><button id="remove" type="button" class="btn btn-secondary btn-sm" onclick="delete_products()">Remove</button></td>
 </tr>`
-   save()
+
+   
+
 }
+
+
 
 function save() {
     localStorage.setItem("products",contents.innerHTML)
@@ -91,3 +99,19 @@ function show() {
 }
 
 show()
+
+/*function del_btn(){
+    btn_remove = [...document.querySelectorAll("#remove")];
+    btn_remove.forEach((products)=>{
+        products.addEventListener("click", delete_products)
+    })
+}
+
+function delete_products(event){
+    display.innerHTML = "";
+    let start_point = btn_remove.indexOf(event.target);
+    featured_products.splice(0, 1);
+    localStorage.setItem("products",contents.innerHTML);
+    add()
+}*/
+
