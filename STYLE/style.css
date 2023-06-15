@@ -53,3 +53,31 @@ a{
     padding: 0px;
 }
 
+body{
+    background-color: #fafafa;
+}
+
+.caption{
+    margin: 5%;
+}
+
+#psnl-d{
+    margin-left: 5%;
+    width: 80%;
+}
+
+.card{
+    margin-left: 5%;
+    width: 80%;
+    background: none;
+    border: none;
+    margin-bottom: 2%;
+}
+
+.card input{
+    width:80%
+}
+
+.detail{
+    margin-left: 5%;
+}
