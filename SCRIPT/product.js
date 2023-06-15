@@ -1,5 +1,5 @@
-let items = document.getElementById("prod-item");
-items.innerHTML=localStorage.getItem("products") 
+//let items = document.getElementById("prod-item")
+//items.innerHTML=localStorage.getItem("products") 
 
 function product_list() {
     

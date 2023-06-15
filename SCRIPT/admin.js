@@ -64,6 +64,7 @@ function add() {
         Description:Describe.value,
         Images:Img.value,
         Price:price.value
+
     }
     id.value=prod.id;
     Name.value=prod.Names;
@@ -71,6 +72,7 @@ function add() {
     Img.value=prod.Images;
     price.value=prod.Price;
     products.push(prod)
+    
     console.log(products);
     save()
     contents.innerHTML += `
@@ -115,3 +117,32 @@ function delete_products(event){
     add()
 }*/
 
+const sortItem = document.querySelector("#sort-items");
+function sortItems() {
+  products = products.sort((a, b) => {
+    if (a.id < b.id) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  console.log(products);
+  add()
+  save()
+  show()
+  
+}
+
+/*=const sortItem = document.querySelector("#sort");
+function sortItems() {
+  products = products.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  prodList.innerHTML = "";
+  displayProducts();
+  console.log("hi");
+  displayProducts();.0*/

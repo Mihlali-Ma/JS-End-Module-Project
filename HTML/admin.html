@@ -37,6 +37,9 @@
         </div>
     </nav>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" fdprocessedid="23zym">ADD PRODUCTS</button>
+    <button id="sort-items" type="button" class="btn btn-success" onclick="sortItems()">SORT</button>
+    <button type="button" class="btn btn-secondary">FILTER</button>
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -47,8 +50,8 @@
           <div class="modal-body">
             <form id="form" name="forms">
               <div class="mb-3">
-                <label for="id" class="col-form-label">ID:</label>
-                <input type="text" class="form-control" name="id" id="product-id" placeholder="enter id">
+                <label for="id" class="col-form-label">Cartegory:</label>
+                <input type="text" class="form-control" name="id" id="product-id" placeholder="type of skateboard">
               </div>
               <div class="mb-3">
                 <label for="Name" class="col-form-label">Name:</label>
@@ -64,7 +67,7 @@
               </div>
               <div class="mb-3">
                 <label for="price" class="col-form-label">pricing:</label>
-                <input type="text" class="form-control" name="price" id="product-price" placeholder="enter image URL">
+                <input type="text" class="form-control" name="price" id="product-price" placeholder="price of prod e.g 2000">
               </div>
             </form>
           </div>
@@ -79,7 +82,7 @@
     <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">Cartegory</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
