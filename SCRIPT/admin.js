@@ -115,60 +115,66 @@ function add() {
     
     console.log(products);
     save()
-
+    displayProducts()
     
-    contents.innerHTML += `
-    <tr>
-    <th scope="row">${prod.id}</th>
-    <td>${prod.Names}</td>
-    <td>${prod.Description}</td>
-    <td>R${prod.Price}</td>
-    <td><img style="height: 70px;" src="${Img.value}"></td>
-    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1${prod.id}" fdprocessedid="23zym">Edit</button>
-
-    <div class="modal fade" id="exampleModal1${prod.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Insert Product Details</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="form" name="forms">
-              <div class="mb-3">
-                <label for="id" class="col-form-label">Cartegory:</label>
-                <input type="text" class="form-control" name="id" id="product-idE${prod.id}" placeholder="type of skateboard">
-              </div>
-              <div class="mb-3">
-                <label for="Name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" name="name" id="product-nameE${prod.id}" placeholder="name of product">
-              </div>
-              <div class="mb-3">
-                <label for="Description" class="col-form-label">Description:</label>
-                <input type="text" class="form-control" name="discri" id="product-descriptE${prod.id}" placeholder="Describe product">
-              </div>
-              <div class="mb-3">
-                <label for="image" class="col-form-label">Image:</label>
-                <input type="text" class="form-control" name="img" id="product-imgE${prod.id}" placeholder="enter image URL">
-              </div>
-              <div class="mb-3">
-                <label for="price" class="col-form-label">pricing:</label>
-                <input type="text" class="form-control" name="price" id="product-priceE${prod.id}" placeholder="price of prod e.g 2000">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <input id="insert" type="button" onclick="Edit()" value="Save changes">
-          </div>
-        </div>
-      </div>
-    </div></td>
-    <td><button id="remove" type="button" class="btn btn-secondary btn-sm">Remove</button></td>
-</tr>`
+  
 }
 
+console.log(products)
+function displayProducts(){
+  contents.innerHTML = ''
+  products.forEach((prod) => {
+    contents.innerHTML += `
+  <tr>
+  <th scope="row">${prod.id}</th>
+  <td>${prod.Name}</td>
+  <td>${prod.Description}</td>
+  <td>R${prod.Price}</td>
+  <td><img style="height: 70px;" src="${prod.Image}"></td>
+  <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1${prod.id}" fdprocessedid="23zym">Edit</button>
 
+  <div class="modal fade" id="exampleModal1${prod.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Insert Product Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form" name="forms">
+            <div class="mb-3">
+              <label for="id" class="col-form-label">Cartegory:</label>
+              <input type="text" class="form-control" name="id" id="product-idE${prod.id}" placeholder="type of skateboard">
+            </div>
+            <div class="mb-3">
+              <label for="Name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" name="name" id="product-nameE${prod.id}" placeholder="name of product">
+            </div>
+            <div class="mb-3">
+              <label for="Description" class="col-form-label">Description:</label>
+              <input type="text" class="form-control" name="discri" id="product-descriptE${prod.id}" placeholder="Describe product">
+            </div>
+            <div class="mb-3">
+              <label for="image" class="col-form-label">Image:</label>
+              <input type="text" class="form-control" name="img" id="product-imgE${prod.id}" placeholder="enter image URL">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="col-form-label">pricing:</label>
+              <input type="text" class="form-control" name="price" id="product-priceE${prod.id}" placeholder="price of prod e.g 2000">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <input id="insert" type="button" onclick="Edit()" value="Save changes">
+        </div>
+      </div>
+    </div>
+  </div></td>
+  <td><button id="remove" type="button" class="btn btn-secondary btn-sm">Remove</button></td>
+</tr>`
+  })
+}
 function Edit(product){
   this.id = document.querySelector(`#product-idE${product.id}`).value,
   this.Names = document.querySelector(`#product-nameE${product.id}`).value,
@@ -210,18 +216,20 @@ function remove(event){
     add()
 }
 
-/*const sortItem = document.querySelector("#sort-items");
+const sortItem = document.querySelector("#sort-items");
 function sortItems() {
   products = products.sort((a, b) => {
     if (a.id < b.id) {
       return -1;
-    } else {
+    } else if (a.id > b.id) {
       return 1;
+    } else {
+      return 0
     }
   });
   contents.innerHTML = "";
   displayProducts();
-  add()
+  // add()
   save()
   show()
   
@@ -243,5 +251,5 @@ function sortItems() {
 
 function renderlist(){
     contents.innerHTML
-    products
+    p
 }
