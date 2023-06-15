@@ -32,6 +32,7 @@ function add_cart() {
         <td><button type="button" class="btn btn-primary btn-sm">Edit</button></td>
         <td><button id="remove" type="button" class="btn btn-secondary btn-sm" onclick="delete_products()">Remove</button></td>
     </tr>`
+    
     //test2
    /* chart= {
         prodName:names,
